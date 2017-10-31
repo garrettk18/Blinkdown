@@ -23,5 +23,10 @@ namespace Blinkdown
             webBrowser1.Document.OpenNew(false);
             webBrowser1.Document.Write(MdHtml);
         }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+        }
     }
 }
