@@ -12,9 +12,17 @@ namespace Blinkdown
 {
     public partial class Form1 : Form
     {
+        private string _fileName;
+        private bool _modified;
+
         public Form1()
         {
             InitializeComponent();
+            _fileName = "";
+            if (_fileName == "")
+            {
+             this.Text = "Untitled - " + Text;
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
