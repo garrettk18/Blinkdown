@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Blinkdown
 {
@@ -40,6 +41,19 @@ namespace Blinkdown
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             openFileDialog1.ShowDialog();
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+            using (StreamReader InputFile = new StreamReader(openFileDialog1.FileName))
+            {
+                string InputText = InputFile.ReadToEnd();
+                textBox1.Text = InputText;
+                Text = openFileDialog1.FileName + " - Blinkdown";
+                webBrowser1.Document.Title = openFileDialog1.FileName;
+                _fileName = openFileDialog1.FileName;
+                _modified = false;
+            }
         }
     }
 }
