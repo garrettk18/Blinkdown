@@ -27,6 +27,11 @@ namespace Blinkdown
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            if (!_modified)
+            {
+                _modified = true;
+                Text = "*" + Text;
+            }
             string MdHtml = CommonMark.CommonMarkConverter.Convert(textBox1.Text);
             webBrowser1.Document.OpenNew(false);
             webBrowser1.Document.Write(MdHtml);
