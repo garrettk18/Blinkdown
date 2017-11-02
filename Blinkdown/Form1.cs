@@ -50,7 +50,7 @@ namespace Blinkdown
                 string InputText = InputFile.ReadToEnd();
                 txtDocument.Text = InputText;
                 Text = openFileDialog1.FileName + " - Blinkdown";
-                webBrowser1.Document.Title = openFileDialog1.FileName;
+                webBrowser1.Document.Title = new FileInfo(openFileDialog1.FileName).Name;
                 _fileName = openFileDialog1.FileName;
                 _modified = false;
             }
