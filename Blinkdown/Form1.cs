@@ -55,5 +55,22 @@ namespace Blinkdown
                 _modified = false;
             }
         }
+
+        private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dlgSave.ShowDialog();
+        }
+
+        private void dlgSave_FileOk(object sender, CancelEventArgs e)
+        {
+            _fileName = dlgSave.FileName;
+            using (StreamWriter OutputFile = new StreamWriter(_fileName)) {
+                OutputFile.Write(txtDocument.Text);
+                _modified = false;
+                Text = _fileName + " - Blinkdown";
+                webBrowser1.Document.Title = new FileInfo(_fileName).Name;
+
+            }
+        }
     }
 }
