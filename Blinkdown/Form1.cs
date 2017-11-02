@@ -72,5 +72,19 @@ namespace Blinkdown
 
             }
         }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(_fileName))
+            {
+                //Show the save as dialog.
+                dlgSave.ShowDialog();
+            } //if filename is empty
+            else
+            {
+                dlgSave.FileName = _fileName;
+                dlgSave_FileOk(this, new CancelEventArgs());
+            } //normal save
+        }
     }
 }
