@@ -60,7 +60,7 @@
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDocument = new System.Windows.Forms.TextBox();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1.SuspendLayout();
@@ -308,7 +308,7 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txtDocument, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.webBrowser1, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -318,16 +318,19 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 100);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
-            // textBox1
+            // txtDocument
             // 
-            this.textBox1.AcceptsReturn = true;
-            this.textBox1.Location = new System.Drawing.Point(3, 3);
-            this.textBox1.MaxLength = 1048576;
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(94, 20);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtDocument.AcceptsReturn = true;
+            this.txtDocument.Location = new System.Drawing.Point(3, 3);
+            this.txtDocument.MaximumSize = new System.Drawing.Size(300, 600);
+            this.txtDocument.MaxLength = 1048576;
+            this.txtDocument.Multiline = true;
+            this.txtDocument.Name = "txtDocument";
+            this.txtDocument.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtDocument.Size = new System.Drawing.Size(94, 0);
+            this.txtDocument.TabIndex = 0;
+            this.txtDocument.WordWrap = false;
+            this.txtDocument.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // webBrowser1
             // 
@@ -397,7 +400,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDocument;
         private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }

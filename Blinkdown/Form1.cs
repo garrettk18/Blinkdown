@@ -33,7 +33,7 @@ namespace Blinkdown
                 _modified = true;
                 Text = "*" + Text;
             }
-            string MdHtml = CommonMark.CommonMarkConverter.Convert(textBox1.Text);
+            string MdHtml = CommonMark.CommonMarkConverter.Convert(txtDocument.Text);
             webBrowser1.Document.OpenNew(false);
             webBrowser1.Document.Write(MdHtml);
         }
@@ -48,7 +48,7 @@ namespace Blinkdown
             using (StreamReader InputFile = new StreamReader(openFileDialog1.FileName))
             {
                 string InputText = InputFile.ReadToEnd();
-                textBox1.Text = InputText;
+                txtDocument.Text = InputText;
                 Text = openFileDialog1.FileName + " - Blinkdown";
                 webBrowser1.Document.Title = openFileDialog1.FileName;
                 _fileName = openFileDialog1.FileName;
