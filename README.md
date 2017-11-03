@@ -6,7 +6,7 @@
 
 ### What Can It Do?
 
-* Live Markdown preview: Start typing, then press TAB to focus a standard web browser control to view the resultant HTML text.
+* Live Markdown preview: Start typing, then press F6 to focus a standard web browser control to view the resultant HTML. (Press F6 again to return to the editor control.)
 * Standard menu bar.
 * Open and save files.
 * Prompt the user to save changes on exit.
