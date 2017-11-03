@@ -8,13 +8,14 @@
 
 * Live Markdown preview: Start typing, then press TAB to focus a standard web browser control to view the resultant HTML text.
 * Standard menu bar.
+* Open and save files.
+* Prompt the user to save changes on exit.
 
 ### What *Can't* it do?
 
 * Most menu options are unimplemented.
-* Open dialog doesn't actually work.
 * No WYSIWYG tools for formatting
-* No copy, paste, save, or undo.
+* No copy, paste, or undo.
 
 ### Building
 
