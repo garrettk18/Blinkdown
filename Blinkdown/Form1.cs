@@ -119,5 +119,25 @@ namespace Blinkdown
 
             }
         }
+
+        private void txtDocument_KeyDown(object sender, KeyEventArgs e)
+        {
+switch(e.KeyCode)
+            {
+                case Keys.F6:
+                    webBrowser1.Focus();
+                    break;
+                default:
+                    break;
+            } //switch
+        }
+
+        private void webBrowser1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyCode == Keys.F6)
+            {
+                txtDocument.Focus();
+            } //If f6 was pressed
+        }
     }
 }
