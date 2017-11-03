@@ -110,7 +110,7 @@ namespace Blinkdown
                 DialogResult Dr = _ShouldSave();
                 if (DialogResult.Yes == Dr)
                 {
-                    saveAsToolStripMenuItem_Click(this, new EventArgs());
+                    saveToolStripMenuItem_Click(this, new EventArgs());
                 } //If yes
                 if (DialogResult.Cancel == Dr)
                 {
