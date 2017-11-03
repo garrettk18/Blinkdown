@@ -86,5 +86,38 @@ namespace Blinkdown
                 dlgSave_FileOk(this, new CancelEventArgs());
             } //normal save
         }
+
+        private DialogResult _ShouldSave()
+        {
+            string SaveFile;
+            if (string.IsNullOrEmpty(_fileName))
+            {
+                SaveFile = "untitled";
+            } //If untitled file
+            else
+            {
+                SaveFile = new FileInfo(_fileName).Name;
+            } //else, we have an existing file name
+            String MessageBoxText = String.Format("Save changes to {0}?", SaveFile);
+            DialogResult Result = MessageBox.Show(MessageBoxText, "Blinkdown", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            return Result;
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (_modified)
+            {
+                DialogResult Dr = _ShouldSave();
+                if (DialogResult.Yes == Dr)
+                {
+                    saveAsToolStripMenuItem_Click(this, new EventArgs());
+                } //If yes
+                if (DialogResult.Cancel == Dr)
+                {
+                    e.Cancel = true;
+                }
+
+            }
+        }
     }
 }
