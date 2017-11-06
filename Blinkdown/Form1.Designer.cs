@@ -324,7 +324,6 @@
             // txtDocument
             // 
             this.txtDocument.AcceptsReturn = true;
-            this.txtDocument.AcceptsTab = true;
             this.txtDocument.Location = new System.Drawing.Point(3, 3);
             this.txtDocument.MaximumSize = new System.Drawing.Size(300, 600);
             this.txtDocument.MaxLength = 1048576;
@@ -335,7 +334,6 @@
             this.txtDocument.TabIndex = 0;
             this.txtDocument.WordWrap = false;
             this.txtDocument.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.txtDocument.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDocument_KeyDown);
             // 
             // webBrowser1
             // 
@@ -347,7 +345,6 @@
             this.webBrowser1.Size = new System.Drawing.Size(94, 44);
             this.webBrowser1.TabIndex = 1;
             this.webBrowser1.Url = new System.Uri("", System.UriKind.Relative);
-            this.webBrowser1.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.webBrowser1_PreviewKeyDown);
             // 
             // openFileDialog1
             // 
