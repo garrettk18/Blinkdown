@@ -119,5 +119,26 @@ namespace Blinkdown
 
             }
         }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch(e.KeyCode)
+            {
+                case Keys.F6:
+                    if (txtDocument.Focused)
+                    {
+                        webBrowser1.Focus();
+                    } // input control
+                    else 
+                    {
+                        txtDocument.Focus();
+                    } //else, in web browser
+                    e.Handled = true;
+                    break;
+                default:
+                    e.Handled = false;
+                    break;
+            } //switch
+        }
     }
 }
